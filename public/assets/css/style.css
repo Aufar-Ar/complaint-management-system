@@ -391,7 +391,6 @@ textarea.text-input {
 
 /* Responsiveness */
 @media (max-width: 768px) {
-/* 1. Header Banner: Gambar ditaruh di atas teks, rata tengah */
   .header {
     flex-direction: column-reverse;
     text-align: center;
@@ -403,57 +402,47 @@ textarea.text-input {
   }
   .header img {
     margin-bottom: 24px;
-    max-width: 140px !important; /* Gambar diperkecil sedikit di HP */
+    max-width: 140px !important; 
   }
   .header h2 {
     font-size: 24px !important;
   }
-
-            /* 2. Kartu Statistik: Dipaksa jadi 2 kolom (kiri-kanan) agar tidak memanjang ke bawah */
-            .stat-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-                margin-bottom: 32px;
-            }
-            .stat-card {
-                padding: 16px 12px;
-            }
-            .stat-value {
-                font-size: 32px; /* Angka diperkecil agar muat di layar HP */
-            }
-            .stat-label {
-                font-size: 12px;
-            }
-
-            /* 3. Top Nav: Penyesuaian ukuran font agar nama user & logo tidak tabrakan */
-            .top-nav h1 {
-                font-size: 18px;
-            }
-            .user-name {
-                display: none; /* Sembunyikan nama user, sisakan ikon dropdown saja biar hemat tempat */
-            }
-
-            /* 4. Tabel (Recent Activity): Diaktifkan swipe horizontal (geser kiri-kanan) */
-            .list-container {
-                -webkit-overflow-scrolling: touch; /* Efek scroll halus di iPhone/Android */
-                border-radius: 8px;
-            }
-            .list-header, .list-row {
-                padding: 12px 16px;
-                gap: 8px;
-            }
-            
-            /* 5. Judul Halaman diperkecil */
-            .header-title {
-                font-size: 20px !important;
-            }
-        }
-        
-        /* Ekstra untuk HP Layar Sangat Kecil (iPhone SE, dll) */
-        @media (max-width: 400px) {
-            .stat-grid {
-                grid-template-columns: 1fr; /* Jadi 1 kolom bersusun jika layarnya sangat sempit */
-            }
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    padding: 16px 12px;
+  }
+  .stat-value {
+    font-size: 32px; 
+  }
+  .stat-label {
+   font-size: 12px;
+  }
+  .top-nav h1 {
+    font-size: 18px;
+  }
+  .user-name {
+    display: none; 
+  }
+  .list-container {
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+  .list-header, .list-row {
+    padding: 12px 16px;
+    gap: 8px;
+  }        
+  .header-title {
+    font-size: 20px !important;
+  }
+  }    
+  @media (max-width: 400px) {
+    .stat-grid {
+    grid-template-columns: 1fr;
+  }
 
 }
 

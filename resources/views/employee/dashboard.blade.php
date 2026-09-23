@@ -70,7 +70,6 @@
 
     <div class="dashboard-container">
 
-        <!-- HEADER DENGAN ILUSTRASI BANNER -->
         <div class="header" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 32px; border-radius: 16px; margin-bottom: 32px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
             <div style="flex: 1; min-width: 250px; padding-right: 24px;">
                 <h2 class="header-title" style="margin-top: 0; font-size: 28px; color: var(--text-primary);">My Tickets</h2>
@@ -79,7 +78,6 @@
             </div>
             
             <div style="flex-basis: 200px; display: flex; justify-content: flex-end;">
-                <!-- Mengambil gambar dari public/assets/images/maintenance.svg -->
                 <img src="{{ asset('assets/images/maintenance.svg') }}" alt="IT Support" style="width: 100%; max-width: 200px; height: auto;">
             </div>
         </div>
@@ -88,14 +86,12 @@
             <div class="alert-success">{{ session('flash_success') }}</div>
         @endif
 
-        <!-- Filter Collections -->
         @php
             $pendingTickets = $complaints->where('status', 'pending');
             $inProgressTickets = $complaints->where('status', 'in_progress');
             $resolvedTickets = $complaints->whereNotIn('status', ['pending', 'in_progress']); 
         @endphp
 
-        <!-- 1. IN PROGRESS SECTION -->
         <div class="section-title" style="margin-top: 32px; margin-bottom: 16px;">
             <h3 style="color: var(--text-primary); font-size: 18px;">In Progress ({{ $inProgressTickets->count() }})</h3>
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin-top: 8px;">
